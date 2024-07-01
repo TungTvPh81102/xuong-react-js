@@ -8,7 +8,7 @@ const LayoutClient = ({ children }) => {
       <div className="min-h-screen px-10 pt-10 bg-white">
         <Header />
         {children}
-        <Footer/>
+        <Footer />
       </div>
     </div>
   );

@@ -7,11 +7,15 @@ import Label from "../components/label/Label";
 import FormGroup from "./../common/FormGroup";
 import Button from "../components/button/Button";
 import { signUpSchema } from "../validation/authValidation";
-import { api } from "./../api/index";
 import { toast, ToastContainer } from "react-toastify";
+import api from "../api";
+import { useContext } from "react";
+import { AuthContext } from "../contexts/AuthContext";
 
 const SignUpPage = () => {
   const nav = useNavigate();
+
+  const { register: registerUser } = useContext(AuthContext);
 
   const {
     handleSubmit,
@@ -24,12 +28,13 @@ const SignUpPage = () => {
   const handleSignUp = (data) => {
     (async () => {
       try {
-        await api.post(`/register`, data);
+        // await api.post(`/register`, data);
+        await registerUser(data.name, data.email, data.password);
         localStorage.setItem("signUpSuccess", "success");
         nav("/sign-in");
       } catch (error) {
         console.log(error);
-        toast.error("Failed to create account. Please try again.");
+        toast.error(error.response?.data);
       }
     })();
   };

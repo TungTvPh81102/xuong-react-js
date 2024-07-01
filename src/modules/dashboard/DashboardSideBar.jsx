@@ -4,6 +4,8 @@ import IconUserDashboard from "../../icon/IconUserDashboard";
 import IconStoreDashboard from "../../icon/IconStoreDashboard";
 import IconLogout from "./../../icon/IconLogout";
 import { toast } from "react-toastify";
+import { useContext } from "react";
+import { AuthContext } from "../../contexts/AuthContext";
 
 const sideBarLinks = [
   {
@@ -30,9 +32,11 @@ const sideBarLinks = [
 
 const DashboardSideBar = () => {
   const nav = useNavigate();
+  const { logout } = useContext(AuthContext);
 
   const handleLogout = () => {
-    localStorage.removeItem("user");
+    // localStorage.removeItem("user");
+    logout();
     toast.success("Logout successfully!");
     nav("/sign-in");
   };

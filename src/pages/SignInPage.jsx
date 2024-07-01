@@ -7,15 +7,15 @@ import Label from "../components/label/Label";
 import FormGroup from "./../common/FormGroup";
 import Button from "../components/button/Button";
 import { signInSchema } from "../validation/authValidation";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { useNavigate } from "react-router-dom";
-import { api } from "../api";
+import { AuthContext } from "../contexts/AuthContext";
 
 const SignInPage = () => {
   const nav = useNavigate();
-
   const [showSignUpSuccessToast, setShowSignUpSuccessToast] = useState(false);
+  const { login } = useContext(AuthContext);
 
   useEffect(() => {
     if (localStorage.getItem("signUpSuccess") === "success") {
@@ -39,12 +39,12 @@ const SignInPage = () => {
   const handleSignIn = (data) => {
     (async () => {
       try {
-        const res = await api.post(`/login`, data);
-        localStorage.setItem("user", JSON.stringify(res.data));
-        nav("/admin");
+        await login(data.email, data.password);
+        // localStorage.setItem("user", JSON.stringify(res.data));
+        nav("/");
       } catch (error) {
-        console.log(error);
-        toast.error("Failed to create account. Please try again.");
+        console.log(error.response?.data || "Failed to sign in");
+        toast.error(error.response?.data);
       }
     })();
   };

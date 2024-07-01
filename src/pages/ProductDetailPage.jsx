@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
 import LayoutClient from "../layouts/LayoutClient";
 import { useContext, useEffect, useState } from "react";
-import { api } from "../api";
 import Heading from "../modules/dashboard/Heading";
 import Button from "../components/button/Button";
 import { Label } from "flowbite-react";
 import { ProductContext } from "../contexts/ProductContext";
 import ProductItem from "../components/product/ProductItem";
+import api from "../api";
 
 const ProductDetailPage = () => {
   const [product, setProduct] = useState([]);

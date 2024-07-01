@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import { createContext, useEffect, useReducer } from "react";
 import productReducer from "../reducer/productReducer";
-import { api } from "../api";
+import api from "../api";
 
 export const ProductContext = createContext();
 

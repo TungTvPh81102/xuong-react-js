@@ -9,10 +9,10 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { productSchema } from "../../../validation/productValidation";
-import { api } from "../../../api";
 import { useContext, useEffect } from "react";
 import { ProductContext } from "../../../contexts/ProductContext";
 import { toast, ToastContainer } from "react-toastify";
+import api from "../../../api";
 
 const categories = [
   {

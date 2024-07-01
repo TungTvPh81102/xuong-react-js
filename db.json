@@ -1,25 +1,35 @@
 {
   "users": [
     {
-      "email": "admin@gmail.com",
-      "password": "$2a$10$bzWqsskHgxDmHrVOlMd/quA3DuyktXaKxZiwhXCzDnqf6h9QpAF8K",
-      "name": "Trương Văn Tùng",
-      "comfirmPassword": "admin@gmail.com",
-      "id": 2
-    },
-    {
       "email": "xepufisoja@mailinator.com",
       "password": "$2a$10$oKrKLNprTdz3jXnvn.1SbOoKqIwDfnrF3dqbsXzSYvKiHL9mBMHye",
       "name": "admin",
-      "comfirmPassword": "xepufisoja@mailinator.com",
-      "id": 3
+      "id": 3,
+      "role": "admin"
     },
     {
-      "email": "bihiqofy@mailinator.com",
-      "password": "$2a$10$4THrbD0ToSnLH53G8s9gF.ueQ3l8rE20F.LCvXSgdVZwldlMb7ZkW",
-      "name": "tusodypo@mailinator.com",
-      "comfirmPassword": "Pa$$w0rd!",
+      "email": "deqiqon@mailinator.com",
+      "password": "$2a$10$.Q09sRbe7bvQI6PerBODH.BoeBP2qBE8DRLKwgWNMqMbqevkEDf4O",
+      "name": "qymypasir@mailinator.com",
       "id": 4
+    },
+    {
+      "email": "wuloludo@mailinator.com",
+      "password": "$2a$10$IT6WXKKXxwx/RUr6iiYQBe/.rJdb0oMYkUhjvaZ3lW0/ziGmnl7xe",
+      "name": "suzi@mailinator.com",
+      "id": 5
+    },
+    {
+      "email": "nyrecekihi@mailinator.com",
+      "password": "$2a$10$0ZQJNtreNTevP.xcBwxequjGeeT/7m4Z71khO1kUl4H2rsmWOzUMq",
+      "name": "nikevi@mailinator.com",
+      "id": 6
+    },
+    {
+      "email": "bytonolod@mailinator.com",
+      "password": "$2a$10$2h/ePedkSQkVub.jwzIuueO./JvAwaulyrnBUYWISRKvxCi0OXVmu",
+      "name": "lyse@mailinator.com",
+      "id": 7
     }
   ],
   "products": [

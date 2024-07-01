@@ -6,7 +6,7 @@ import Button from "../../../components/button/Button";
 import { useContext, useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import { ProductContext } from "../../../contexts/ProductContext";
-import { api } from "../../../api";
+import api from "../../../api";
 
 const ProductList = () => {
   const [message, setMessage] = useState(false);
